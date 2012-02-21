@@ -9,17 +9,17 @@ sdNAv = {};
 	
 		// SETTINGS
         sdNav.element = 'nav',
-        sdNav.tier1 = sdNav.element + '#toolbar_horizontal',
-        sdNav.tier2 = sdNav.element + '#toolbar_sub',
-        sdNav.tier3 = sdNav.element + '#toolbar_vertical';
+        sdNav.tier1 = '#toolbar_horizontal',
+        sdNav.tier2 = '#toolbar_sub',
+        sdNav.tier3 = '#toolbar_vertical';
 
 		// check for options
         if (settings) $.extend(sdNav, settings);
 
 		// GLOBAL VARIABLES
-        sdNav.tb1 = jq.add(sdNav.tier1),
-        sdNav.tb2 = jq.add(sdNav.tier2),
-        sdNav.tb3 = jq.add(sdNav.tier3);
+        sdNav.tb1 = jq.add(sdNav.element + sdNav.tier1),
+        sdNav.tb2 = jq.add(sdNav.element + sdNav.tier2),
+        sdNav.tb3 = jq.add(sdNav.element + sdNav.tier3);
 
 		// test for 
         if (sdNav.type == 1) {
