@@ -1,0 +1,74 @@
+# sdSmartNav v1.0.4 #
+##### Created by Adam Merrifield, 02-21-12 10:25 #####
+
+## About sdSmartNav ##
+
+I use this jQuery plugin in a lot of my themes to help my create complex multi-tiered navigation systems cleanly and effectively. When paired with the right plist options and markup, the user can simply select which type of multi-tier navigation they want and this plugin takes care of the rest.
+
+## Contents ##
+
+* jquery.sdsmartnav.js - sdSmartNav script
+* jquery.sdsmartnav.min.js - minified sdSmartNav script
+* example_options.plist - an example of an option set you might include in your plist
+* example_options.js - an example of the contents of the corresponding js files for the plist options
+
+### Usage ###
+
+1. include jQuery in the `<head/>`
+2. initialize the sdNAv object in `<script>` tags in the `<head/>`
+3. include this plugin code in the `<head/>` or within your themes script files
+4. invoke the plugin in the `<head>` or within your themes script files:
+	
+		$.sdSmartNav();
+		
+5. use optional settings:
+
+		$.sdSmartNav({
+			element:'nav',
+			tier1:'#toolbar_horizontal',
+	        tier2:'#toolbar_sub',
+	        tier3:'#toolbar_vertical'
+		});
+		
+6. create plist options for navigation type (see example_options.plist)
+7. add corresponding js files for navigation options (see example_options.js)
+
+### Example HTML ###
+	
+	<!DOCTYPE HTML>
+	<html>
+	<head>
+		<script src="jquery.min.js" charset="utf-8"></script>
+		<script src="jquery.sdsmartnav.min.js" charset="utf-8"></script>
+		
+		%style_variations%
+
+		<script charset="utf-8">
+		sdNAv = {};
+		$(document).ready(function() {
+			$.sdSmartNav({
+				element:'nav',
+				tier1:'#toolbar_horizontal',
+				tier2:'#toolbar_sub',
+				tier3:'#toolbar_vertical'
+			});
+		});
+		</script>
+	</head>
+	<body>
+	
+		<nav id="toolbar_horizontal">
+			%toolbar%
+		</nav>
+		
+		<div id="content">
+			<nav id="toolbar_sub"></nav>
+			%content%
+		</div>
+		<div id="sidebar">
+			<nav id="toolbar_vertical"></nav>
+			%sidebar%
+		</div>
+
+	</body>
+	</html>
