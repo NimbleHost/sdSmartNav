@@ -44,7 +44,10 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 		%style_variations%
 
 		<script charset="utf-8">
+		// initiate sdNav object
 		sdNAv = {};
+		
+		// invoke sdSmartNav
 		$(document).ready(function() {
 			$.sdSmartNav({
 				element:'nav',
