@@ -1,5 +1,5 @@
 // be sure to initiate sdNav object in <head> of html with sdNAv = {};
-/* sdSmartNav 1.0.4 */
+/* sdSmartNav 1.0.5 */
 (function($) {
     $.sdSmartNav = function(settings) {
 	
@@ -65,8 +65,8 @@
 
 		// prepend sub tiers
         if (sdNav.tb1.children().length) {
-            if (tbvP.length) sdNav.tb3.prepend(tbvP).css('display','block');
-            if (tbsP.length) sdNav.tb2.prepend(tbsP).css('display','block');
+            if (tbvP.length) tbvP.clone().prependTo(sdNav.tb3), sdNav.tb3.css('display','block');
+            if (tbsP.length) tbsP.clone().prependTo(sdNav.tb2), sdNav.tb2.css('display','block');
         };
 		
 		// PUBLIC VARIABLES
