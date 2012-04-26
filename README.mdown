@@ -42,7 +42,7 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 * `tier1:` refers to the id or class used identify the above navigation element
 * `tier2:` refers to the id or class used identify the second level navigation
 * `tier3:` refers to the id or class used identify the third level navigation
-* `drop:` boolean setting to turn on drop menus
+* `drop:` boolean setting to turn on drop menus (true)
 
 ### Example HTML ###
 	
@@ -74,16 +74,14 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 	</head>
 	<body>
 	
-		<nav id="toolbar_horizontal">
-			%toolbar%
-		</nav>
+		<nav class="toolbar1">%toolbar%</nav>
 		
 		<div id="content">
-			<nav id="toolbar_sub"></nav>
+			<nav class="toolbar2"></nav>
 			%content%
 		</div>
 		<div id="sidebar">
-			<nav id="toolbar_vertical"></nav>
+			<nav class="toolbar3"></nav>
 			%sidebar%
 		</div>
 

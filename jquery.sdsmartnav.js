@@ -1,5 +1,5 @@
 // be sure to initiate sdNav object in <head> of html with sdNAv = {};
-/* sdSmartNav 1.0.7 */
+/* sdSmartNav 1.0.8 (c) 2012 Adam Merrifield https://github.com/seyDoggy/sdSmartNav */
 (function($) {
     $.sdSmartNav = function(settings) {
 	
