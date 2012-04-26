@@ -1,4 +1,4 @@
-# sdSmartNav v1.0.7 #
+# sdSmartNav v1.0.8 #
 ##### Created by Adam Merrifield, 03-13-12 21:28 #####
 
 ## About sdSmartNav ##
@@ -9,8 +9,10 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 
 * jquery.sdsmartnav.js - sdSmartNav script
 * jquery.sdsmartnav.min.js - minified sdSmartNav script
-* example_options.plist - an example of an option set you might include in your plist
-* example_options.js - an example of the contents of the corresponding js files for the plist options
+* Theme.plist - an example of an option set you might include in your plist
+* scripts - the corresponding js files for the plist options
+* styles.css - example styles for your basic 3-tier split menu with drop-down's
+* colourtag.css - example color styles to correspond to styles.css
 
 ### Usage ###
 
@@ -21,17 +23,26 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 	
 		$.sdSmartNav();
 		
-5. use optional settings:
+5. use optional settings (shown here with defaults):
 
 		$.sdSmartNav({
 			element:'nav',
 			tier1:'#toolbar_horizontal',
 	        tier2:'#toolbar_sub',
-	        tier3:'#toolbar_vertical'
+	        tier3:'#toolbar_vertical',
+			drop: false
 		});
 		
 6. create plist options for navigation type (see example_options.plist)
 7. add corresponding js files for navigation options (see example_options.js)
+
+### Options ###
+
+* `element:` refers to the HTML element type that wraps your navigation list
+* `tier1:` refers to the id or class used identify the above navigation element
+* `tier2:` refers to the id or class used identify the second level navigation
+* `tier3:` refers to the id or class used identify the third level navigation
+* `drop:` boolean setting to turn on drop menus
 
 ### Example HTML ###
 	
@@ -41,8 +52,6 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 		<script src="jquery.min.js" charset="utf-8"></script>
 		<script src="jquery.sdsmartnav.min.js" charset="utf-8"></script>
 		
-		%style_variations%
-
 		<script charset="utf-8">
 		// initiate sdNav object
 		sdNAv = {};
@@ -51,12 +60,17 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 		$(document).ready(function() {
 			$.sdSmartNav({
 				element:'nav',
-				tier1:'#toolbar_horizontal',
-				tier2:'#toolbar_sub',
-				tier3:'#toolbar_vertical'
+				tier1:'.toolbar1',
+				tier2:'.toolbar2',
+				tier3:'.toolbar3',
+				drop: true
 			});
 		});
+
 		</script>
+		
+		%style_variations%
+
 	</head>
 	<body>
 	

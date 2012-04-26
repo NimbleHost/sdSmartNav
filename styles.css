@@ -1,0 +1,290 @@
+/* Toolbar 1
+================================================== 
+Example Markup
+
+<nav class="toolbar1">
+	<ul class="toolbarList">
+		<li class="currentListItem">
+			<a class="current" href="./" rel="self" title="CRE4MY">CRE4MY</a>
+		</li>
+		<li class="normalListItem">
+			<a class="normal" href="tryit/" rel="self" title="Try It">Try It</a>
+		</li>
+		<li class="normalListItem">
+			<a class="normal" href="reviewit/" rel="self" title="Review It">Review It</a>
+		</li>
+		<li class="normalListItem">
+			<a class="normal" href="faq/" rel="self" title="FAQ">FAQ</a></li>
+		<li class="normalListItem">
+			<a class="normal" href="http://seydesign.com/support/" rel="self" title="Support">Support</a>
+		</li>
+	</ul>
+</nav>
+*/
+
+nav.toolbar1 {
+	display: none;
+	font-size: 1em;
+	margin-bottom: 2%;
+}
+nav.toolbar1 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav.toolbar1 ul li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+nav.toolbar1 ul li a {
+	border: 1px solid;
+	display: inline-block;
+	line-height: 2.5em;
+	margin-right: 0.25em;
+	padding: 0 1em;
+	text-decoration: none;
+	white-space: nowrap;
+}
+nav.toolbar1 ul.toolbarList ul {
+	display: none;
+}
+/* Down arrow, top menu */
+nav.toolbar1 ul li.hasChildren a:after {
+	content: " ";
+    border-top: 5px solid;
+    border-right: 5px solid;
+    border-bottom: 3px solid;
+    border-left: 5px solid;
+	display: inline-block;
+	height: 0;
+	margin-left: 0.5em;
+	width: 0;
+}
+nav.toolbar1 ul li.hasChildren li a:after {
+	border: none;
+}
+/* Child - Level 1 */
+nav.toolbar1 ul ul {
+	display: none;
+	left: 0;
+	padding-top: 10px;
+	position: absolute;
+	zoom: 1;
+}
+nav.toolbar1 ul ul li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+nav.toolbar1 ul ul li a:link,
+nav.toolbar1 ul ul li a:visited {
+	display: block;
+	height: auto;
+	margin: 0px;
+	padding: 5px 10px;
+	position: relative;
+	width: auto;
+}
+nav.toolbar1 ul ul li a.current:before {
+	border: none !important;
+	display: none !important;
+	height: 0;
+	width: 0;
+}
+/* Down arrow, second menu */
+nav.toolbar1 ul ul li.hasChildren > a:after {
+	display: inline-block;
+	border-top: 5px solid;
+	border-right: none;
+	border-bottom: 5px solid;
+	border-left: 5px solid;
+}
+/* Child - Level 2 */
+nav.toolbar1 ul ul ul {
+	left: 100%;
+	top: -10px;
+}
+/* Toolbar 2
+================================================== 
+Example Markup
+
+<nav class="toolbar2" style="display: block; ">
+	<ul class="toolbarList">
+		<li class="normalListItem">
+			<a class="normal" href="options/" rel="self" title="Options">Options</a>
+		</li>
+		<li class="normalListItem">
+			<a class="normal" href="writing/" rel="self" title="Writing Page Styles">Writing Page Styles</a>
+		</li>
+		<li class="normalListItem">
+			<a class="normal" href="media/" rel="self" title="Media Page Styles">Media Page Styles</a>
+		</li>
+		<li class="normalListItem">
+			<a class="normal" href="utility/" rel="self" title="Utility Page Styles">Utility Page Styles</a>
+		</li>
+	</ul>
+</nav>
+*/
+nav.toolbar2 {
+	display: none;
+	font-size: 1em;
+	margin: 0 1.5em;
+}
+nav.toolbar2 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav.toolbar2 ul li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+nav.toolbar2 ul li a {
+	border: 1px solid;
+	display: inline-block;
+	line-height: 2.5em;
+	margin-right: 0.25em;
+	padding: 0 1em;
+	text-decoration: none;
+	white-space: nowrap;
+}
+nav.toolbar2 ul ul {
+	display: none;
+}
+/* Down arrow, top menu */
+nav.toolbar2 ul li.hasChildren a:after {
+	content: " ";
+    border-top: 5px solid;
+    border-right: 5px solid;
+    border-bottom: 3px solid;
+    border-left: 5px solid;
+	display: inline-block;
+	height: 0;
+	margin-left: 0.5em;
+	width: 0;
+}
+nav.toolbar2 ul li.hasChildren li a:after {
+	border: none;
+}
+/* Child - Level 1 */
+nav.toolbar2 ul ul {
+	display: none;
+	left: 0;
+	padding-top: 10px;
+	position: absolute;
+	zoom: 1;
+}
+nav.toolbar2 ul ul li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+nav.toolbar2 ul ul li a:link,
+nav.toolbar2 ul ul li a:visited {
+	display: block;
+	height: auto;
+	margin: 0px;
+	padding: 5px 10px;
+	position: relative;
+	width: auto;
+}
+nav.toolbar2 ul ul li a.current:before {
+	border: none !important;
+	display: none !important;
+	height: 0;
+	width: 0;
+}
+/* Down arrow, second menu */
+nav.toolbar2 ul ul li.hasChildren > a:after {
+	display: inline-block;
+	border-top: 5px solid;
+	border-right: none;
+	border-bottom: 5px solid;
+	border-left: 5px solid;
+}
+/* Child - Level 2 */
+nav.toolbar2 ul ul ul {
+	left: 100%;
+	top: -10px;
+}
+/* Toolbar 3
+================================================== 
+Example Markup
+
+<nav class="toolbar3" style="display: block; ">
+	<ul class="toolbarList">
+		<li class="normalListItem">
+			<a class="normal" href="../../../../writing/blog/" rel="self" title="Blog">Blog</a>
+		</li>
+		<li class="currentAncestorListItem">
+			<a class="currentAncestor" href="../../../../writing/styledtext/" rel="self" title="Styled Text">Styled Text</a>
+			<ul class="toolbarList">
+				<li class="currentAncestorListItem">
+					<a class="currentAncestor" href="../../../../writing/styledtext/formattingtest/" rel="self" title="Formatting Test">Formatting Test</a>
+					<ul class="toolbarList">
+						<li class="currentListItem">
+							<a class="current" href="./" rel="self" title="Going Deep">Going Deep</a>
+						</li>
+					</ul>
+				</li>
+				<li class="normalListItem">
+					<a class="normal" href="../../../../writing/styledtext/headingtest/" rel="self" title="Heading Test">Heading Test</a>
+				</li>
+				<li class="normalListItem">
+					<a class="normal" href="../../../../writing/styledtext/demo/" rel="self" title="The Demo">The Demo</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+*/
+nav.toolbar3 {
+	border: 1px solid;
+	border-bottom-style: none;
+	display: none;
+	margin-bottom: 2em;
+}
+nav.toolbar3 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav.toolbar3 ul li {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+nav.toolbar3 ul li a {
+	border-bottom: 1px solid;
+	display: block;
+	line-height: 3em;
+	padding-left: 1em;
+}
+nav.toolbar3 ul li a:hover {
+	text-decoration: none;
+}
+/* Child - Level 1 */
+nav.toolbar3 ul ul {
+	background: transparent;
+	border-style: none;
+	margin-bottom: 0;
+}
+nav.toolbar3 ul ul a {
+	padding-left: 2em;
+}
+/* Child - Level 2 */
+nav.toolbar3 ul ul ul a {
+	padding-left: 3em;
+}
+/* Child - Level 3 */
+nav.toolbar3 ul ul ul ul a {
+	padding-left: 4em;
+}
+/* Child - Level 4 */
+nav.toolbar3 ul ul ul ul ul a {
+	padding-left: 4em;
+}

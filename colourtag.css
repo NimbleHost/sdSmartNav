@@ -1,0 +1,118 @@
+/* Toolbar 1
+================================================== */
+nav.toolbar1 ul li a {
+	background-color: %colour_toolbar1_background%;
+	border-color: %colour_toolbar1_border%;
+}
+nav.toolbar1 ul li.hasChildren a:after {
+	border-top-color: %colour_toolbar1_border%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+nav.toolbar1 ul ul li.hasChildren a:after {
+	border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: %colour_toolbar1_border%;
+}
+nav.toolbar1 ul li.hasChildren a:after {
+	border-top-color: %colour_toolbar1_border%;
+}
+nav.toolbar1 ul li.currentListItem a:link,
+nav.toolbar1 ul li.currentListItem a:visited {
+	background-color: %colour_toolbar1_background + 0.03%;
+	color: %colour_toolbar1_text - 0.06%;;
+}
+nav.toolbar1 ul li.currentAncestorListItem a:link,
+nav.toolbar1 ul li.currentAncestorListItem a:visited {
+	background-color: %colour_toolbar1_background + 0.03%;
+	color: %colour_toolbar1_text - 0.03%;;
+}
+nav.toolbar1 ul li.normalListItem a:link,
+nav.toolbar1 ul li.normalListItem a:visited {
+	color: %colour_toolbar1_text%;
+}
+nav.toolbar1 ul li.currentListItem a:hover,
+nav.toolbar1 li.currentListItem a:active,
+nav.toolbar1 ul li.currentAncestorListItem a:hover,
+nav.toolbar1 li.currentAncestorListItem a:active,
+nav.toolbar1 ul li.normalListItem a:hover,
+nav.toolbar1 li.normalListItem a:active {
+	background-color: %colour_toolbar1_background + 0.05%;
+	color: %colour_toolbar1_text - 0.08%;
+}
+/* Toolbar 2
+================================================== */
+nav.toolbar2 ul li a {
+	background-color: %colour_toolbar2_background%;
+	border-color: %colour_toolbar2_border%;
+}
+nav.toolbar2 ul li.hasChildren a:after {
+	border-top-color: %colour_toolbar2_border%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+nav.toolbar2 ul ul li.hasChildren a:after {
+	border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: %colour_toolbar2_border%;
+}
+nav.toolbar2 ul li.hasChildren a:after {
+	border-top-color: %colour_toolbar2_border%;
+}
+nav.toolbar2 ul li.currentListItem a:link,
+nav.toolbar2 ul li.currentListItem a:visited {
+	background-color: %colour_toolbar2_background + 0.03%;
+	color: %colour_toolbar2_text - 0.06%;;
+}
+nav.toolbar2 ul li.currentAncestorListItem a:link,
+nav.toolbar2 ul li.currentAncestorListItem a:visited {
+	background-color: %colour_toolbar2_background + 0.03%;
+	color: %colour_toolbar2_text - 0.03%;;
+}
+nav.toolbar2 ul li.normalListItem a:link,
+nav.toolbar2 ul li.normalListItem a:visited {
+	color: %colour_toolbar2_text%;
+}
+nav.toolbar2 ul li.currentListItem a:hover,
+nav.toolbar2 li.currentListItem a:active,
+nav.toolbar2 ul li.currentAncestorListItem a:hover,
+nav.toolbar2 li.currentAncestorListItem a:active,
+nav.toolbar2 ul li.normalListItem a:hover,
+nav.toolbar2 li.normalListItem a:active {
+	background-color: %colour_toolbar2_background + 0.05%;
+	color: %colour_toolbar2_text - 0.08%;
+}
+/* Toolbar 3
+================================================== */
+nav.toolbar3,
+nav.toolbar3 ul li a {
+	background-color: %colour_toolbar3_background%;
+	border-color: %colour_toolbar3_border%;
+}
+nav.toolbar3 ul li.currentListItem a:link,
+nav.toolbar3 ul li.currentListItem a:visited {
+	background-color: %colour_toolbar3_background + 0.03%;
+	color: %colour_toolbar3_text - 0.06%;;
+}
+nav.toolbar3 ul li.currentAncestorListItem a:link,
+nav.toolbar3 ul li.currentAncestorListItem a:visited {
+	background-color: %colour_toolbar3_background + 0.03%;
+	color: %colour_toolbar3_text - 0.03%;;
+}
+nav.toolbar3 ul li.normalListItem a:link,
+nav.toolbar3 ul li.normalListItem a:visited {
+	color: %colour_toolbar3_text%;
+}
+nav.toolbar3 ul li.currentListItem a:hover,
+nav.toolbar3 li.currentListItem a:active,
+nav.toolbar3 ul li.currentAncestorListItem a:hover,
+nav.toolbar3 li.currentAncestorListItem a:active,
+nav.toolbar3 ul li.normalListItem a:hover,
+nav.toolbar3 li.normalListItem a:active {
+	background-color: %colour_toolbar3_background + 0.05%;
+	color: %colour_toolbar3_text - 0.08%;
+}

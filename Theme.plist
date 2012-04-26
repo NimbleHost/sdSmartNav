@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RWColourTagCSSFiles</key>
+	<array>
+		<string>colourtag.css</string>
+	</array>
+	<key>RWCopyFiles</key>
+	<array>
+		<string>css</string>
+		<string>images</string>
+		<string>scripts</string>
+		<string>styles</string>
+		<string>javascript.js</string>
+	</array>
+	<key>RWStyleVariations</key>
+	<dict>
+		<key>RWStyleGroups</key>
+		<array>
+			<dict>
+				<key>GroupDisplayName</key>
+				<dict>
+					<key>de</key>
+					<string>Navigation type</string>
+					<key>en</key>
+					<string>Navigation type</string>
+					<key>fr</key>
+					<string>Navigation type</string>
+					<key>it</key>
+					<string>Navigation type</string>
+					<key>ja</key>
+					<string>Navigation type</string>
+				</dict>
+				<key>GroupMembers</key>
+				<array>
+					<dict>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>3 tier</string>
+							<key>en</key>
+							<string>3 tier</string>
+							<key>fr</key>
+							<string>3 tier</string>
+							<key>it</key>
+							<string>3 tier</string>
+							<key>ja</key>
+							<string>3 tier</string>
+						</dict>
+						<key>Enabled</key>
+						<true/>
+						<key>Files</key>
+						<array>
+							<string>scripts/navigation/3tier.js</string>
+						</array>
+						<key>Name</key>
+						<string>3 tier</string>
+						<key>Type</key>
+						<string>Javascript</string>
+					</dict>
+					<dict>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>2 tier (a)</string>
+							<key>en</key>
+							<string>2 tier (a)</string>
+							<key>fr</key>
+							<string>2 tier (a)</string>
+							<key>it</key>
+							<string>2 tier (a)</string>
+							<key>ja</key>
+							<string>2 tier (a)</string>
+						</dict>
+						<key>Enabled</key>
+						<false/>
+						<key>Files</key>
+						<array>
+							<string>scripts/navigation/2tier_a.js</string>
+						</array>
+						<key>Name</key>
+						<string>2 tier (a)</string>
+						<key>Type</key>
+						<string>Javascript</string>
+					</dict>
+					<dict>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>2 tier (b)</string>
+							<key>en</key>
+							<string>2 tier (b)</string>
+							<key>fr</key>
+							<string>2 tier (b)</string>
+							<key>it</key>
+							<string>2 tier (b)</string>
+							<key>ja</key>
+							<string>2 tier (b)</string>
+						</dict>
+						<key>Enabled</key>
+						<false/>
+						<key>Files</key>
+						<array>
+							<string>scripts/navigation/2tier_b.js</string>
+						</array>
+						<key>Name</key>
+						<string>2 tier (b)</string>
+						<key>Type</key>
+						<string>Javascript</string>
+					</dict>
+					<dict>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Vertical</string>
+							<key>en</key>
+							<string>Vertical</string>
+							<key>fr</key>
+							<string>Vertical</string>
+							<key>it</key>
+							<string>Vertical</string>
+							<key>ja</key>
+							<string>Vertical</string>
+						</dict>
+						<key>Enabled</key>
+						<false/>
+						<key>Files</key>
+						<array>
+							<string>scripts/navigation/vertical.js</string>
+						</array>
+						<key>Name</key>
+						<string>Vertical</string>
+						<key>Type</key>
+						<string>Javascript</string>
+					</dict>
+					<dict>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Hide</string>
+							<key>en</key>
+							<string>Hide</string>
+							<key>fr</key>
+							<string>Hide</string>
+							<key>it</key>
+							<string>Hide</string>
+							<key>ja</key>
+							<string>Hide</string>
+						</dict>
+						<key>Enabled</key>
+						<false/>
+						<key>Files</key>
+						<array>
+							<string>scripts/navigation/hide.js</string>
+						</array>
+						<key>Name</key>
+						<string>Hide</string>
+						<key>Type</key>
+						<string>Javascript</string>
+					</dict>
+				</array>
+				<key>GroupName</key>
+				<string>Navigation type</string>
+				<key>GroupSelectionLimit</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>GroupDisplayName</key>
+				<dict>
+					<key>de</key>
+					<string>Colors (toolbar 1)</string>
+					<key>en</key>
+					<string>Colors (toolbar 1)</string>
+					<key>fr</key>
+					<string>Colors (toolbar 1)</string>
+					<key>it</key>
+					<string>Colors (toolbar 1)</string>
+					<key>ja</key>
+					<string>Colors (toolbar 1)</string>
+				</dict>
+				<key>GroupMembers</key>
+				<array>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#EFEFEF</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Background</string>
+							<key>en</key>       
+							<string>Background</string>
+							<key>fr</key>       
+							<string>Background</string>
+							<key>it</key>       
+							<string>Background</string>
+							<key>ja</key>       
+							<string>Background</string>
+						</dict>
+						<key>Name</key>
+						<string>Background</string>
+						<key>Tag</key>
+						<string>%colour_toolbar1_background%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#DEDEDE</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Border</string>
+							<key>en</key>       
+							<string>Border</string>
+							<key>fr</key>       
+							<string>Border</string>
+							<key>it</key>       
+							<string>Border</string>
+							<key>ja</key>       
+							<string>Border</string>
+						</dict>
+						<key>Name</key>
+						<string>Border</string>
+						<key>Tag</key>
+						<string>%colour_toolbar1_border%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#B1B1B1</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Text</string>
+							<key>en</key>       
+							<string>Text</string>
+							<key>fr</key>       
+							<string>Text</string>
+							<key>it</key>       
+							<string>Text</string>
+							<key>ja</key>       
+							<string>Text</string>
+						</dict>
+						<key>Name</key>
+						<string>Text</string>
+						<key>Tag</key>
+						<string>%colour_toolbar1_text%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+				</array>
+				<key>GroupName</key>
+				<string>Colors (toolbar 1)</string>
+			</dict>
+			<dict>
+				<key>GroupDisplayName</key>
+				<dict>
+					<key>de</key>
+					<string>Colors (toolbar 2)</string>
+					<key>en</key>
+					<string>Colors (toolbar 2)</string>
+					<key>fr</key>
+					<string>Colors (toolbar 2)</string>
+					<key>it</key>
+					<string>Colors (toolbar 2)</string>
+					<key>ja</key>
+					<string>Colors (toolbar 2)</string>
+				</dict>
+				<key>GroupMembers</key>
+				<array>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#EFEFEF</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Background</string>
+							<key>en</key>       
+							<string>Background</string>
+							<key>fr</key>       
+							<string>Background</string>
+							<key>it</key>       
+							<string>Background</string>
+							<key>ja</key>       
+							<string>Background</string>
+						</dict>
+						<key>Name</key>
+						<string>Background</string>
+						<key>Tag</key>
+						<string>%colour_toolbar2_background%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#DEDEDE</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Border</string>
+							<key>en</key>       
+							<string>Border</string>
+							<key>fr</key>       
+							<string>Border</string>
+							<key>it</key>       
+							<string>Border</string>
+							<key>ja</key>       
+							<string>Border</string>
+						</dict>
+						<key>Name</key>
+						<string>Border</string>
+						<key>Tag</key>
+						<string>%colour_toolbar2_border%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#B1B1B1</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Text</string>
+							<key>en</key>       
+							<string>Text</string>
+							<key>fr</key>       
+							<string>Text</string>
+							<key>it</key>       
+							<string>Text</string>
+							<key>ja</key>       
+							<string>Text</string>
+						</dict>
+						<key>Name</key>
+						<string>Text</string>
+						<key>Tag</key>
+						<string>%colour_toolbar2_text%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+				</array>
+				<key>GroupName</key>
+				<string>Colors (toolbar 2)</string>
+			</dict>
+			<dict>
+				<key>GroupDisplayName</key>
+				<dict>
+					<key>de</key>
+					<string>Colors (toolbar 3)</string>
+					<key>en</key>
+					<string>Colors (toolbar 3)</string>
+					<key>fr</key>
+					<string>Colors (toolbar 3)</string>
+					<key>it</key>
+					<string>Colors (toolbar 3)</string>
+					<key>ja</key>
+					<string>Colors (toolbar 3)</string>
+				</dict>
+				<key>GroupMembers</key>
+				<array>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#EFEFEF</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Background</string>
+							<key>en</key>       
+							<string>Background</string>
+							<key>fr</key>       
+							<string>Background</string>
+							<key>it</key>       
+							<string>Background</string>
+							<key>ja</key>       
+							<string>Background</string>
+						</dict>
+						<key>Name</key>
+						<string>Background</string>
+						<key>Tag</key>
+						<string>%colour_toolbar3_background%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#DEDEDE</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Border</string>
+							<key>en</key>       
+							<string>Border</string>
+							<key>fr</key>       
+							<string>Border</string>
+							<key>it</key>       
+							<string>Border</string>
+							<key>ja</key>       
+							<string>Border</string>
+						</dict>
+						<key>Name</key>
+						<string>Border</string>
+						<key>Tag</key>
+						<string>%colour_toolbar3_border%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+					<dict>
+						<key>DefaultColour</key>
+						<string>#B1B1B1</string>
+						<key>DisplayName</key>
+						<dict>
+							<key>de</key>
+							<string>Text</string>
+							<key>en</key>       
+							<string>Text</string>
+							<key>fr</key>       
+							<string>Text</string>
+							<key>it</key>       
+							<string>Text</string>
+							<key>ja</key>       
+							<string>Text</string>
+						</dict>
+						<key>Name</key>
+						<string>Text</string>
+						<key>Tag</key>
+						<string>%colour_toolbar3_text%</string>
+						<key>Type</key>
+						<string>Colour</string>
+					</dict>
+				</array>
+				<key>GroupName</key>
+				<string>Colors (toolbar 3)</string>
+			</dict>
+		</array>
+	</dict>
+	<key>RWTemplateHTML</key>
+	<string>index.html</string>
+	<key>RWTextToolbar</key>
+	<dict>
+		<key>RWAlwaysDisplayFullNavigation</key>
+		<true/>
+		<key>RWBreadCrumb</key>
+		<string>&lt;ul class="breadcrumbList"&gt;%items%&lt;/ul&gt;</string>
+		<key>RWBreadCrumbItem</key>
+		<string>&lt;li class="breadcrumbItem"&gt;%separator%&lt;a href="%url%" title="%title%"&gt;%title%&lt;/a&gt;&lt;/li&gt;</string>
+		<key>RWBreadCrumbSeparator</key>
+		<string/>
+		<key>RWSupportedLevels</key>
+		<integer>4</integer>
+		<key>RWToolbarItemCurrent</key>
+		<string>&lt;li class="currentListItem"&gt;&lt;a class="current" href="%url%" rel="%rel%" title="%title%"&gt;%title%&lt;/a&gt;%subitems%&lt;/li&gt;</string>
+		<key>RWToolbarItemCurrentAncestor</key>
+		<string>&lt;li class="currentAncestorListItem"&gt;&lt;a class="currentAncestor" href="%url%" rel="%rel%" title="%title%"&gt;%title%&lt;/a&gt;%subitems%&lt;/li&gt;</string>
+		<key>RWToolbarItemNormal</key>
+		<string>&lt;li class="normalListItem"&gt;&lt;a class="normal" href="%url%" rel="%rel%" title="%title%"&gt;%title%&lt;/a&gt;%subitems%&lt;/li&gt;</string>
+		<key>RWToolbarList</key>
+		<string>&lt;ul class="toolbarList"&gt;%items%&lt;/ul&gt;</string>
+	</dict>
+	<key>RWThemeAuthor</key>
+	<string>Merrifield</string>
+	<key>RWThemeCapabilities</key>
+	<dict>
+		<key>RWSupportsContentOnlySubPages</key>
+		<true/>
+		<key>RWSupportsDisplayNames</key>
+		<true/>
+		<key>RWSupportsPathTo</key>
+		<true/>
+		<key>RWSupportsToolbarRelTag</key>
+		<true/>
+	</dict>
+	<key>RWThemeDisplayName</key>
+	<dict>
+		<key>de</key>
+		<string>sdSmartNav</string>
+		<key>en</key>
+		<string>sdSmartNav</string>
+		<key>fr</key>
+		<string>sdSmartNav</string>
+		<key>it</key>
+		<string>sdSmartNav</string>
+		<key>ja</key>
+		<string>sdSmartNav</string>
+	</dict><key>RWThemeImage</key>
+	<string>preview.png</string>
+	<key>RWThemeImageLarge</key>
+	<string>preview_large.png</string>
+	<key>RWThemeKeyWords</key>
+		<array>
+			<string>sdSmartNav</string>
+			<string>smart</string>
+			<string>navigation</string>
+		</array>
+	<key>RWThemeName</key>
+	<string>sdSmartNav</string>
+	<key>RWThemeShortName</key>
+	<string>sdsmartnav</string>
+	<key>RWVersion</key>
+	<string>1</string>
+</dict>
+</plist>

@@ -10,7 +10,8 @@
         sdNav.element = 'nav',
         sdNav.tier1 = '#toolbar_horizontal',
         sdNav.tier2 = '#toolbar_sub',
-        sdNav.tier3 = '#toolbar_vertical';
+        sdNav.tier3 = '#toolbar_vertical'
+		sdNav.drop = false;
 
 		// check for options
         if (settings) $.extend(sdNav, settings);
@@ -74,6 +75,37 @@
 				if (!(jq.add('body').width() <= '600')) tbsP.css('display','none');
 			}
         };
+		
+		// add drop down menus
+		if (sdNav.drop == true) {
+			// tb1 hover
+			if (sdNav.tb1.find(' > ul li > ul')) {
+				//Add 'hasChildren' class to menu li's
+				sdNav.tb1.find(' > ul li > ul').parent().addClass('hasChildren');
+			
+				//Menu hover animation
+				sdNav.tb1.find('ul li').hover(function(){
+					$(this).find("> ul").stop('true','true').animate({
+						opacity: 'toggle',
+						paddingTop: 'toggle'
+					});
+				});
+			};
+
+			// tb2 hover
+			if (sdNav.tb2.find(' > ul li > ul')) {
+				//Add 'hasChildren' class to menu li's
+				sdNav.tb2.find(' > ul li > ul').parent().addClass('hasChildren');
+			
+				//Menu hover animation
+				sdNav.tb2.find('ul li').hover(function(){
+					$(this).find("> ul").stop('true','true').animate({
+						opacity: 'toggle',
+						paddingTop: 'toggle'
+					});
+				});
+			};
+		};
 		
 		// PUBLIC VARIABLES
         if (tbvP.length) sdNav.tbvP = tbvP;
