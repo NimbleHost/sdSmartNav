@@ -1,5 +1,5 @@
 // be sure to initiate sdNav object in <head> of html with sdNAv = {};
-/* sdSmartNav 1.0.8 (c) 2012 Adam Merrifield https://github.com/seyDoggy/sdSmartNav */
+/* sdSmartNav 1.0.9 (c) 2012 Adam Merrifield https://github.com/seyDoggy/sdSmartNav */
 (function($) {
     $.sdSmartNav = function(settings) {
 	
@@ -78,12 +78,12 @@
 		
 		// add drop down menus
 		if (sdNav.drop == true) {
-			// tb1 hover
+			// if tb1 has children
 			if (sdNav.tb1.find(' > ul li > ul')) {
-				//Add 'hasChildren' class to menu li's
+				//Add 'hasChildren' class to tb1 ul li's
 				sdNav.tb1.find(' > ul li > ul').parent().addClass('hasChildren');
 			
-				//Menu hover animation
+				// tb1 hover animation
 				sdNav.tb1.find('ul li').hover(function(){
 					$(this).find("> ul").stop('true','true').animate({
 						opacity: 'toggle',
@@ -92,12 +92,12 @@
 				});
 			};
 
-			// tb2 hover
+			// if tb2 has children
 			if (sdNav.tb2.find(' > ul li > ul')) {
-				//Add 'hasChildren' class to menu li's
+				//Add 'hasChildren' class to tb2 ul li
 				sdNav.tb2.find(' > ul li > ul').parent().addClass('hasChildren');
 			
-				//Menu hover animation
+				// tb2 hover animation
 				sdNav.tb2.find('ul li').hover(function(){
 					$(this).find("> ul").stop('true','true').animate({
 						opacity: 'toggle',
@@ -105,6 +105,16 @@
 					});
 				});
 			};
+
+			// if tb3 has children
+			if (sdNav.tb3.find(' > ul li > ul')) {
+				// show siblings ul and parent ul's of a.current
+				// to counter RWAlwaysDisplayFullNavigation : true
+				sdNav.tb3.find('a.current')
+					.siblings('ul').css('display','block')
+						.end().parents('ul').css('display','block');
+			};
+
 		};
 		
 		// PUBLIC VARIABLES

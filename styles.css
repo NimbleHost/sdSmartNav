@@ -271,6 +271,7 @@ nav.toolbar3 ul li a:hover {
 nav.toolbar3 ul ul {
 	background: transparent;
 	border-style: none;
+	display: none;/* counter RWAlwaysDisplayFullNavigation : true */
 	margin-bottom: 0;
 }
 nav.toolbar3 ul ul a {
