@@ -16,9 +16,6 @@ nav.toolbar1 ul ul li.hasChildren a:after {
     border-bottom-color: transparent;
     border-left-color: %colour_toolbar1_border%;
 }
-nav.toolbar1 ul li.hasChildren a:after {
-	border-top-color: %colour_toolbar1_border%;
-}
 nav.toolbar1 ul li.currentListItem a:link,
 nav.toolbar1 ul li.currentListItem a:visited {
 	background-color: %colour_toolbar1_background + 0.03%;
