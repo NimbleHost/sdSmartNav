@@ -87,12 +87,6 @@ nav.toolbar1 ul ul li a:visited {
 	position: relative;
 	width: auto;
 }
-nav.toolbar1 ul ul li a.current:before {
-	border: none !important;
-	display: none !important;
-	height: 0;
-	width: 0;
-}
 /* Down arrow, second menu */
 nav.toolbar1 ul ul li.hasChildren > a:after {
 	display: inline-block;
@@ -191,12 +185,6 @@ nav.toolbar2 ul ul li a:visited {
 	padding: 5px 10px;
 	position: relative;
 	width: auto;
-}
-nav.toolbar2 ul ul li a.current:before {
-	border: none !important;
-	display: none !important;
-	height: 0;
-	width: 0;
 }
 /* Down arrow, second menu */
 nav.toolbar2 ul ul li.hasChildren > a:after {
