@@ -1,5 +1,4 @@
-# sdSmartNav v1.0.9 #
-##### Created by Adam Merrifield, 03-13-12 21:28 #####
+# sdSmartNav v1.1.0 #
 
 ## About sdSmartNav ##
 
