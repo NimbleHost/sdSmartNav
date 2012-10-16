@@ -2,7 +2,7 @@
 
 be sure to initiate sdNav object in <head> of html with sdNAv = {};
 
-sdSmartNav 1.1.0
+sdSmartNav 1.1.1
 Adam Merrifield https://github.com/seyDoggy/sdSmartNav
 GNU GPL 2.0
 
@@ -100,31 +100,31 @@ GNU GPL 2.0
 					});
 					// position drop menus according to container width
 					// http://stackoverflow.com/a/11525189/1308256
-					var elm = jq.add(this).find("> ul");
-					var off = elm .offset();
-					var l = off.left;
-					var w = elm.width();
-					var docW = jq.add(window).width();
+					var elm = $(this).find("> ul");
+					if (elm.length) {
+						var off = elm.offset(),
+							l = off.left,
+							w = elm.width(),
+							docW = jq.add(window).width(),
+							isEntirelyVisible = ((l + w) <= docW);
 
-					var isEntirelyVisible = ((l + w) <= docW);
+						if ( ! isEntirelyVisible ) {
 
-					if ( ! isEntirelyVisible ) {
+							// add class
+							jq.add(this).find("> ul").addClass('outOfView');
 
-						// add class
-						jq.add(this).find("> ul").addClass('outOfView');
-
-						// style
-						nav.find('ul ul ul.outOfView').css({
-							'left':'auto',
-							'right':'85%',
-							'top':'75%'
-						});
-						nav.find('> ul > li > ul.outOfView').css({
-							'left':'auto',
-							'right':'0',
-							'top':'auto'
-						});
-						
+							// style
+							nav.find('ul ul ul.outOfView').css({
+								'left':'auto',
+								'right':'85%',
+								'top':'75%'
+							});
+							nav.find('> ul > li > ul.outOfView').css({
+								'left':'auto',
+								'right':'0',
+								'top':'auto'
+							});
+						}
 					}
 				},
 				function(){
