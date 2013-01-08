@@ -2,9 +2,9 @@
 
 be sure to initiate sdNav object in <head> of html with sdNAv = {};
 
-sdSmartNav 1.1.1
+sdSmartNav 1.1.2
 Adam Merrifield https://github.com/seyDoggy/sdSmartNav
-GNU GPL 2.0
+GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 
 */
 (function($) {
@@ -41,9 +41,6 @@ GNU GPL 2.0
 			// if ancestor children are not found
             if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentListItem > ul');
         } else if (sdNav.type == 2) {
-			// show tier 1
-			sdNav.tb1.css('display','block');
-    
 			// PRIVATE VARIABLES
             tbsP = sdNav.tb1.find('> ul'),
             tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul');
