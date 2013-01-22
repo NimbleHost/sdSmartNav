@@ -31,6 +31,7 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 
 		// test for
 		if (sdNav.type == 1) {
+			// Navigation type: 2tier_a
 			// show tier 1
 			sdNav.tb1.css('display','block');
     
@@ -41,6 +42,7 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 			// if ancestor children are not found
             if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentListItem > ul');
         } else if (sdNav.type == 2) {
+			// Navigation type: 2tier_b
 			// PRIVATE VARIABLES
             tbsP = sdNav.tb1.find('> ul'),
             tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul');
@@ -48,15 +50,18 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 			// if ancestor children are not found
             if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentListItem > ul');
         } else if (sdNav.type == 3) {
+			// Navigation type: vertical
 			// PRIVATE VARIABLES
             tbsP = '',
             tbvP = sdNav.tb1.find('> ul');
 		} else if (sdNav.type == 4) {
+			// Navigation type: hide
 			// PRIVATE VARIABLES
 			tbsP = '',
 			tbvP = '';
 			sdNav.tb1.remove();
         } else {
+			// Navigation type: 3tier
 			// show tier 1
 			sdNav.tb1.css('display','block');
     
