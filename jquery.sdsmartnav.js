@@ -9,11 +9,11 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 */
 (function($) {
     $.sdSmartNav = function(settings) {
-	
+
 		// initiate jQuery object
 		var jq = $([]),
 		tbvP,tbsP;
-	
+
 		// SETTINGS
 		sdNav.element = 'nav',
 		sdNav.tier1 = '#toolbar_horizontal',
@@ -34,7 +34,7 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 			// Navigation type: 2tier_a
 			// show tier 1
 			sdNav.tb1.css('display','block');
-    
+
 			// PRIVATE VARIABLES
             tbsP = '',
 			tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul');
@@ -64,7 +64,7 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 			// Navigation type: 3tier
 			// show tier 1
 			sdNav.tb1.css('display','block');
-    
+
 			// PRIVATE VARIABLES (apply if sdNav.type == 0 || typeof sdNav.type == 'undefined')
 			tbsP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul'),
 			tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul > li.currentAncestorListItem > ul');
@@ -85,7 +85,7 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 				if (!jq.add('body').width() <= '600') tbsP.css('display','none');
 			}
         }
-		
+
 		// add drop down menus
 		if (sdNav.drop === true) {
 
@@ -93,7 +93,7 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 			var dropMenu = function (nav) {
 				//Add 'hasChildren' class to tb2 ul li
 				nav.find(' > ul li > ul').parent().addClass('hasChildren');
-			
+
 				// tb2 hover animation
 				nav.find('ul li').hover(function(){
 					$(this).find("> ul").stop('true','true').animate({
@@ -139,7 +139,7 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 					jq.add(this).find("> ul").removeClass('outOfView');
 				});
 			};
-			
+
 			// if tb1 has children
 			if (sdNav.tb1.find(' > ul li > ul')) {
 				dropMenu(sdNav.tb1);
