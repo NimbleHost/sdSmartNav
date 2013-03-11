@@ -2,7 +2,7 @@
 
 be sure to initiate sdNav object in <head> of html with sdNAv = {};
 
-sdSmartNav 1.1.2
+sdSmartNav 1.1.4
 Adam Merrifield https://github.com/seyDoggy/sdSmartNav
 GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 
@@ -106,49 +106,55 @@ GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
 				nav.find(' > ul li > ul').parent().addClass('hasChildren');
 
 				// tb2 hover animation
-				nav.find('ul li').hover(function(){
-					$(this).find("> ul").stop('true','true').animate({
-						opacity: 'toggle',
-						paddingTop: 'toggle'
-					});
-					// position drop menus according to container width
-					// http://stackoverflow.com/a/11525189/1308256
-					var elm = $(this).find("> ul");
-					if (elm.length) {
-						var off = elm.offset(),
-							l = off.left,
-							w = elm.width(),
-							docW = jq.add(window).width(),
-							isEntirelyVisible = ((l + w) <= docW);
+				$(nav).on(
+				{
+					mouseenter: function()
+					{
+						$(this).find("> ul").stop('true','true').animate({
+							opacity: 'toggle',
+							paddingTop: 'toggle'
+						});
+						// position drop menus according to container width
+						// http://stackoverflow.com/a/11525189/1308256
+						var elm = $(this).find("> ul");
+						if (elm.length) {
+							var off = elm.offset(),
+								l = off.left,
+								w = elm.width(),
+								docW = jq.add(window).width(),
+								isEntirelyVisible = ((l + w) <= docW);
 
-						if ( ! isEntirelyVisible ) {
+							if ( ! isEntirelyVisible ) {
 
-							// add class
-							jq.add(this).find("> ul").addClass('outOfView');
+								// add class
+								jq.add(this).find("> ul").addClass('outOfView');
 
-							// style
-							nav.find('ul ul ul.outOfView').css({
-								'left':'auto',
-								'right':'85%',
-								'top':'75%'
-							});
-							nav.find('> ul > li > ul.outOfView').css({
-								'left':'auto',
-								'right':'0',
-								'top':'auto'
-							});
+								// style
+								nav.find('ul ul ul.outOfView').css({
+									'left':'auto',
+									'right':'85%',
+									'top':'75%'
+								});
+								nav.find('> ul > li > ul.outOfView').css({
+									'left':'auto',
+									'right':'0',
+									'top':'auto'
+								});
+							}
 						}
+					},
+					mouseleave: function()
+					{
+						console.log('I was left');
+						// tb2 hover animation
+						jq.add(this).find("> ul").stop('true','true').animate({
+							opacity: 'toggle',
+							paddingTop: 'toggle'
+						});
+						// position drop menus according to container width
+						jq.add(this).find("> ul").removeClass('outOfView');
 					}
-				},
-				function(){
-					// tb2 hover animation
-					jq.add(this).find("> ul").stop('true','true').animate({
-						opacity: 'toggle',
-						paddingTop: 'toggle'
-					});
-					// position drop menus according to container width
-					jq.add(this).find("> ul").removeClass('outOfView');
-				});
+				}, 'ul li');
 			};
 
 			// if tb1 has children

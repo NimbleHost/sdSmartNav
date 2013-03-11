@@ -1,4 +1,4 @@
-# sdSmartNav v1.1.2 #
+# sdSmartNav v1.1.4 #
 
 ## About sdSmartNav ##
 
