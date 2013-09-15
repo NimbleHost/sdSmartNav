@@ -1,184 +1,187 @@
-/* 
+/**
+ * sdSmartNav
+ * the multi-tiered navigation system for Rapidweaver with less code
+ *
+ * Latest version: https://github.com/seyDoggy/sdSmartNav
+ *
+ * License <https://github.com/seyDoggy/sdSmartNav/blob/master/LICENSE>
+ */
 
-be sure to initiate sdNav object in <head> of html with sdNAv = {};
-
-sdSmartNav 1.1.4
-Adam Merrifield https://github.com/seyDoggy/sdSmartNav
-GNU GPL 2.0 <http://www.gnu.org/licenses/gpl-2.0.html>
-
-*/
+// be sure to instantiate sdNav object in <head> of html with sdNAv = {};
 (function($) {
     $.sdSmartNav = function(settings) {
 
-		// initiate jQuery object
-		var jq = $([]),
-		tbvP,tbsP;
+        var pluginName = 'sdSmartNav',
+        pluginVersion = '1.1.6';
 
-		// SETTINGS
-		sdNav.element = 'nav',
-		sdNav.tier1 = '#toolbar_horizontal',
-		sdNav.tier2 = '#toolbar_sub',
-		sdNav.tier3 = '#toolbar_vertical',
-		sdNav.drop = false;
+        // instantiate jQuery object
+        var jq = $([]),
+        tbvP,tbsP;
 
-		// check for options
-		if (settings) $.extend(sdNav, settings);
+        // SETTINGS
+        sdNav.element = 'nav',
+        sdNav.tier1 = '#toolbar_horizontal',
+        sdNav.tier2 = '#toolbar_sub',
+        sdNav.tier3 = '#toolbar_vertical',
+        sdNav.drop = false;
 
-		// GLOBAL VARIABLES
-		sdNav.tb1 = jq.add(sdNav.element + sdNav.tier1),
-		sdNav.tb2 = jq.add(sdNav.element + sdNav.tier2),
-		sdNav.tb3 = jq.add(sdNav.element + sdNav.tier3);
+        // check for options
+        if (settings) $.extend(sdNav, settings);
 
-		// test for
-		switch (sdNav.type)
-		{
-			case 1:
-				// Navigation type: 2tier_a
-				// show tier 1
-				sdNav.tb1.css('display','block');
+        // GLOBAL VARIABLES
+        sdNav.tb1 = $(sdNav.element + sdNav.tier1),
+        sdNav.tb2 = $(sdNav.element + sdNav.tier2),
+        sdNav.tb3 = $(sdNav.element + sdNav.tier3);
 
-				// PRIVATE VARIABLES
-				tbsP = '',
-				tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul');
+        // test for
+        switch (sdNav.type)
+        {
+            case 1:
+                // Navigation type: 2tier_a
+                // show tier 1
+                sdNav.tb1.css('display','block');
 
-				// if ancestor children are not found
-				if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentListItem > ul');
-				break;
+            // PRIVATE VARIABLES
+            tbsP = '',
+            tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul');
 
-			case 2:
-				// Navigation type: 2tier_b
-				// PRIVATE VARIABLES
-				tbsP = sdNav.tb1.find('> ul'),
-				tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul');
+            // if ancestor children are not found
+            if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentListItem > ul');
+            break;
 
-				// if ancestor children are not found
-				if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentListItem > ul');
-				break;
+            case 2:
+                // Navigation type: 2tier_b
+                // PRIVATE VARIABLES
+                tbsP = sdNav.tb1.find('> ul'),
+            tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul');
 
-			case 3:
-				// Navigation type: vertical
-				// PRIVATE VARIABLES
-				tbsP = '',
-				tbvP = sdNav.tb1.find('> ul');
-				break;
+            // if ancestor children are not found
+            if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentListItem > ul');
+            break;
 
-			case 4:
-				// Navigation type: hide
-				// PRIVATE VARIABLES
-				tbsP = '',
-				tbvP = '';
-				sdNav.tb1.remove();
-				break;
+            case 3:
+                // Navigation type: vertical
+                // PRIVATE VARIABLES
+                tbsP = '',
+            tbvP = sdNav.tb1.find('> ul');
+            break;
 
-			default:
-				// Navigation type: 3tier
-				// show tier 1
-				sdNav.tb1.css('display','block');
+            case 4:
+                // Navigation type: hide
+                // PRIVATE VARIABLES
+                tbsP = '',
+            tbvP = '';
+            sdNav.tb1.remove();
+            break;
 
-				// PRIVATE VARIABLES (apply if sdNav.type == 0 || typeof sdNav.type == 'undefined')
-				tbsP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul'),
-				tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul > li.currentAncestorListItem > ul');
+            default:
+                // Navigation type: 3tier
+                // show tier 1
+                sdNav.tb1.css('display','block');
 
-				// if ancestor children are not found (apply if sdNav.type == 0 || typeof sdNav.type == 'undefined')
-				if (!tbsP.length) tbsP = sdNav.tb1.find('> ul > li.currentListItem > ul');
-				if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul > li.currentListItem > ul');
-				break;
-		}
+            // PRIVATE VARIABLES (apply if sdNav.type == 0 || typeof sdNav.type == 'undefined')
+            tbsP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul'),
+            tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul > li.currentAncestorListItem > ul');
 
-		// prepend sub tiers
-        if (sdNav.tb1.children().length) {
-			if (tbvP.length) {
-				sdNav.tb3.prepend(tbvP.clone()).css('display','block');
-				if (!jq.add('body').width() <= '600') tbvP.css('display','none');
-			}
-			if (tbsP.length) {
-				sdNav.tb2.prepend(tbsP.clone()).css('display','block');
-				if (!jq.add('body').width() <= '600') tbsP.css('display','none');
-			}
+            // if ancestor children are not found (apply if sdNav.type == 0 || typeof sdNav.type == 'undefined')
+            if (!tbsP.length) tbsP = sdNav.tb1.find('> ul > li.currentListItem > ul');
+            if (!tbvP.length) tbvP = sdNav.tb1.find('> ul > li.currentAncestorListItem > ul > li.currentListItem > ul');
+            break;
         }
 
-		// add drop down menus
-		if (sdNav.drop === true) {
+        // prepend sub tiers
+        if (sdNav.tb1.children().length) {
+            if (tbvP.length) {
+                sdNav.tb3.not('#toolbar3').prepend(tbvP.clone()).css('display','block');
+                if (!$(window).width() <= '768') tbvP.css('display','none');
+            }
+            if (tbsP.length) {
+                sdNav.tb2.prepend(tbsP.clone()).css('display','block');
+                if (!$(window).width() <= '768') tbsP.css('display','none');
+            }
+        }
 
-			// dropMenu(nav) function
-			var dropMenu = function (nav) {
-				//Add 'hasChildren' class to tb2 ul li
-				nav.find(' > ul li > ul').parent().addClass('hasChildren');
+        // add drop down menus
+        if (sdNav.drop === true) {
 
-				// tb2 hover animation
-				$(nav).on(
-				{
-					mouseenter: function()
-					{
-						$(this).find("> ul").stop('true','true').animate({
-							opacity: 'toggle',
-							paddingTop: 'toggle'
-						});
-						// position drop menus according to container width
-						// http://stackoverflow.com/a/11525189/1308256
-						var elm = $(this).find("> ul");
-						if (elm.length) {
-							var off = elm.offset(),
-								l = off.left,
-								w = elm.width(),
-								docW = jq.add(window).width(),
-								isEntirelyVisible = ((l + w) <= docW);
+            // dropMenu(nav) function
+            var dropMenu = function (nav) {
+                //Add 'hasChildren' class to tb2 ul li
+                nav.find(' > ul li > ul').parent().addClass('hasChildren');
 
-							if ( ! isEntirelyVisible ) {
+                // tb2 hover animation
+                $(nav).on(
+                    {
+                    mouseenter: function()
+                    {
+                        $(this).find("> ul").stop('true','true').animate({
+                            opacity: 'toggle',
+                            paddingTop: 'toggle'
+                        });
+                        // position drop menus according to container width
+                        // http://stackoverflow.com/a/11525189/1308256
+                        var elm = $(this).find("> ul");
+                        if (elm.length) {
+                            var off = elm.offset(),
+                            l = off.left,
+                            w = elm.width(),
+                            docW = $(window).width(),
+                            isEntirelyVisible = ((l + w) <= docW);
 
-								// add class
-								jq.add(this).find("> ul").addClass('outOfView');
+                            if ( ! isEntirelyVisible ) {
 
-								// style
-								nav.find('ul ul ul.outOfView').css({
-									'left':'auto',
-									'right':'85%',
-									'top':'75%'
-								});
-								nav.find('> ul > li > ul.outOfView').css({
-									'left':'auto',
-									'right':'0',
-									'top':'auto'
-								});
-							}
-						}
-					},
-					mouseleave: function()
-					{
-						console.log('I was left');
-						// tb2 hover animation
-						jq.add(this).find("> ul").stop('true','true').animate({
-							opacity: 'toggle',
-							paddingTop: 'toggle'
-						});
-						// position drop menus according to container width
-						jq.add(this).find("> ul").removeClass('outOfView');
-					}
-				}, 'ul li');
-			};
+                                // add class
+                                $(this).find("> ul").addClass('outOfView');
 
-			// if tb1 has children
-			if (sdNav.tb1.find(' > ul li > ul')) {
-				dropMenu(sdNav.tb1);
-			}
+                                // style
+                                nav.find('ul ul ul.outOfView').css({
+                                    'left':'auto',
+                                    'right':'85%',
+                                    'top':'75%'
+                                });
+                                nav.find('> ul > li > ul.outOfView').css({
+                                    'left':'auto',
+                                    'right':'0',
+                                    'top':'auto'
+                                });
+                            }
+                        }
+                    },
+                    mouseleave: function()
+                    {
+                        // tb2 hover animation
+                        $(this).find("> ul").stop('true','true').animate({
+                            opacity: 'toggle',
+                            paddingTop: 'toggle'
+                        });
+                        // position drop menus according to container width
+                        $(this).find("> ul").removeClass('outOfView');
+                    }
+                }, 'ul li');
+            };
 
-			// if tb2 has children
-			if (sdNav.tb2.find(' > ul li > ul')) {
-				dropMenu(sdNav.tb2);
-			}
+            // if tb1 has children
+            if (sdNav.tb1.find(' > ul li > ul')) {
+                dropMenu(sdNav.tb1);
+            }
 
-			// if tb3 has children
-			if (sdNav.tb3.find(' > ul li > ul')) {
-				// show siblings ul and parent ul's of a.current
-				// to counter RWAlwaysDisplayFullNavigation : true
-				sdNav.tb3.find('a.current')
-					.siblings('ul').css('display','block')
-						.end().parents('ul').css('display','block');
-			}
+            // if tb2 has children
+            if (sdNav.tb2.find(' > ul li > ul')) {
+                dropMenu(sdNav.tb2);
+            }
 
-		}
+            // if tb3 has children
+            if (sdNav.tb3.find(' > ul li > ul')) {
+                // show siblings ul and parent ul's of a.current
+                // to counter RWAlwaysDisplayFullNavigation : true
+                sdNav.tb3.find('a.current')
+                .siblings('ul').css('display','block')
+                .end().parents('ul').css('display','block');
+            }
 
-		// PUBLIC VARIABLES
+        }
+
+        // PUBLIC VARIABLES
         if (tbvP.length) sdNav.tbvP = tbvP;
         if (tbsP.length) sdNav.tbsP = tbsP;
     };
