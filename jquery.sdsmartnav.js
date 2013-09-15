@@ -12,7 +12,7 @@
     $.sdSmartNav = function(settings) {
 
         var pluginName = 'sdSmartNav',
-        pluginVersion = '1.1.6';
+        pluginVersion = '1.2.0';
 
         // instantiate jQuery object
         var jq = $([]),
@@ -23,6 +23,7 @@
         sdNav.tier1 = '#toolbar_horizontal',
         sdNav.tier2 = '#toolbar_sub',
         sdNav.tier3 = '#toolbar_vertical',
+        sdNav.ignore = '#toolbar_responsive',
         sdNav.drop = false;
 
         // check for options
@@ -92,7 +93,7 @@
         // prepend sub tiers
         if (sdNav.tb1.children().length) {
             if (tbvP.length) {
-                sdNav.tb3.not('#toolbar3').prepend(tbvP.clone()).css('display','block');
+                sdNav.tb3.not(sdNav.ignore).prepend(tbvP.clone()).css('display','block');
                 if (!$(window).width() <= '768') tbvP.css('display','none');
             }
             if (tbsP.length) {
