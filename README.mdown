@@ -1,4 +1,4 @@
-# sdSmartNav v1.1.5 #
+# sdSmartNav #
 
 ## About sdSmartNav ##
 
@@ -19,19 +19,24 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 2. initialize the sdNAv object in `<script>` tags in the `<head/>`
 3. include this plugin code in the `<head/>` or within your themes script files
 4. invoke the plugin in the `<head>` or within your themes script files:
-	
-		$.sdSmartNav();
-		
+
+```js
+$.sdSmartNav();
+```
+
 5. use optional settings (shown here with defaults):
 
-		$.sdSmartNav({
-			element:'nav',
-			tier1:'#toolbar_horizontal',
-	        tier2:'#toolbar_sub',
-	        tier3:'#toolbar_vertical',
-			drop: false
-		});
-		
+```js
+$.sdSmartNav({
+    element:'nav',
+    tier1:'#toolbar_horizontal',
+    tier2:'#toolbar_sub',
+    tier3:'#toolbar_vertical',
+    ignore: '#toolbar_responsive',
+    drop: false
+});
+```
+
 6. create plist options for navigation type (see example_options.plist)
 7. add corresponding js files for navigation options (see example_options.js)
 
@@ -41,48 +46,54 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 * `tier1:` refers to the id or class used identify the above navigation element
 * `tier2:` refers to the id or class used identify the second level navigation
 * `tier3:` refers to the id or class used identify the third level navigation
+* `ignore:` refers to the id or class used identify a container that might hold navigation but which you want sdSmartNav to ignore
 * `drop:` boolean setting to turn on drop menus (true)
 
 ### Example HTML ###
-	
-	<!DOCTYPE HTML>
-	<html>
-	<head>
-		<script src="jquery.min.js" charset="utf-8"></script>
-		<script src="jquery.sdsmartnav.min.js" charset="utf-8"></script>
-		
-		<script charset="utf-8">
-		// initiate sdNav object
-		sdNAv = {};
-		
-		// invoke sdSmartNav
-		$(document).ready(function() {
-			$.sdSmartNav({
-				element:'nav',
-				tier1:'.toolbar1',
-				tier2:'.toolbar2',
-				tier3:'.toolbar3',
-				drop: true
-			});
-		});
 
-		</script>
-		
-		%style_variations%
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="jquery.min.js" charset="utf-8"></script>
+    <script src="jquery.sdsmartnav.min.js" charset="utf-8"></script>
+    
+    <script charset="utf-8">
+    // initiate sdNav object
+    sdNAv = {};
+    
+    // invoke sdSmartNav
+    $(document).ready(function() {
+        $.sdSmartNav({
+            element:'nav',
+            tier1:'.toolbar1',
+            tier2:'.toolbar2',
+            tier3:'.toolbar3',
+            ignore:'.toolbar3.responsive',// same css as .toolbar3 but ignored by sdSmartNav
+            drop: true
+        });
+    });
 
-	</head>
-	<body>
-	
-		<nav class="toolbar1">%toolbar%</nav>
-		
-		<div id="content">
-			<nav class="toolbar2"></nav>
-			%content%
-		</div>
-		<div id="sidebar">
-			<nav class="toolbar3"></nav>
-			%sidebar%
-		</div>
+    </script>
+    
+    %style_variations%
 
-	</body>
-	</html>
+</head>
+<body>
+
+    <nav class="toolbar3 responsive">%toolbar%</nav>
+    
+    <nav class="toolbar1">%toolbar%</nav>
+    
+    <div id="content">
+        <nav class="toolbar2"></nav>
+        %content%
+    </div>
+    <div id="sidebar">
+        <nav class="toolbar3"></nav>
+        %sidebar%
+    </div>
+
+</body>
+</html>
+```
