@@ -20,22 +20,22 @@ I use this jQuery plugin in a lot of my themes to help my create complex multi-t
 3. include this plugin code in the `<head/>` or within your themes script files
 4. invoke the plugin in the `<head>` or within your themes script files:
 
-        ```js
-        $.sdSmartNav();
-        ```
+    ```js
+    $.sdSmartNav();
+    ```
 
 5. use optional settings (shown here with defaults):
 
-        ```js
-        $.sdSmartNav({
-            element:'nav',
-            tier1:'#toolbar_horizontal',
-            tier2:'#toolbar_sub',
-            tier3:'#toolbar_vertical',
-            ignore: '#toolbar_responsive',
-            drop: false
-        });
-        ```
+    ```js
+    $.sdSmartNav({
+        element:'nav',
+        tier1:'#toolbar_horizontal',
+        tier2:'#toolbar_sub',
+        tier3:'#toolbar_vertical',
+        ignore: '#toolbar_responsive',
+        drop: false
+    });
+    ```
 
 6. create plist options for navigation type (see example_options.plist)
 7. add corresponding js files for navigation options (see example_options.js)
